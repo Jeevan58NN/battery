@@ -10,77 +10,74 @@ import uvicorn
 from rag import RAG
 from pathlib import Path
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="PINN Inference API")
+app = FastAPI(title="Battery AI (PINN + RAG)")
 
-# Load API key from environment variable
 API_KEY = os.getenv("API_KEY")
-if not API_KEY:
-    logger.warning("API_KEY environment variable not set! API will be unsecured.")
 
-# Global variables for model and metadata
 model = None
 meta = None
 templates = None
+
 
 @app.on_event("startup")
 async def startup_event():
     global model, meta, templates
 
-    try:
-        logger.info(f"Working directory: {os.getcwd()}")
-        logger.info(f"Files: {os.listdir('.')}")
+    logger.info(f"Working directory: {os.getcwd()}")
+    logger.info(f"Files: {os.listdir('.')}")
 
-        # ---- Load PINN Model ----
+    # ---- Load Model ----
+    try:
         custom_objects = {"PINN": PINN, "ResidualBlock": ResidualBlock}
         model = tf.keras.models.load_model(
-            "pinn_inference.keras", compile=False, custom_objects=custom_objects
+            "pinn_inference.keras",
+            compile=False,
+            custom_objects=custom_objects
         )
         logger.info("✓ PINN model loaded")
+    except Exception as e:
+        logger.error(f"❌ Error loading model: {e}")
+        raise
 
-        # ---- Load Metadata ----
+    # ---- Metadata ----
+    try:
         meta = joblib.load("pinn_meta_full.pkl")
         logger.info("✓ Metadata loaded")
+    except Exception as e:
+        logger.error(f"❌ Error loading metadata: {e}")
+        raise
 
-        # ---- Templates ----
+    # ---- Templates ----
+    try:
         with open("material_templates.json", "r") as f:
             templates = json.load(f)
         logger.info("✓ Templates loaded")
-
     except Exception as e:
-        logger.error(f"❌ Model/Metadata load failed: {e}")
-        raise
-    
-    # ---- RAG Index Load ----
+        logger.error(f"❌ Error loading templates: {e}")
+
+    # ---- RAG Index ----
     try:
-        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-        DOCS_DIR = os.path.join(BASE_DIR, "docs")
+        docs_path = Path(__file__).parent / "docs"
+        logger.info(f"RAG docs folder: {docs_path}")
 
-        logger.info(f"RAG docs folder: {DOCS_DIR}")
+        RAG.load_index()
 
-        RAG.load_index(DOCS_DIR)
-        if not RAG.vectorizer:
-            logger.info("Building new RAG index...")
-            RAG.build_index_from_folder(DOCS_DIR)
+        if RAG.vectorizer is None:
+            logger.info("No index found → building new RAG index...")
+            RAG.build_index_from_folder(str(docs_path))
 
-        logger.info(f"✓ RAG index ready with {len(RAG.doc_ids)} docs")
-
+        logger.info(f"✓ RAG Ready. Docs: {len(RAG.doc_ids)}")
     except Exception as e:
-        logger.warning(f"⚠️ RAG index failed: {e}")
-
-    # ---------------- Load or Build RAG Index ----------------
-    
+        logger.warning(f"⚠️ RAG start failed: {e}")
 
 
-
-# ---------------- RAG endpoints ----------------
+# ------------------ RAG Endpoints ------------------
 
 @app.post("/rag/reindex")
 def rag_reindex():
-    """Rebuild index from /docs folder (use after uploading docs)"""
     try:
         RAG.build_index_from_folder("docs")
         return {"status": "ok", "n_docs": len(RAG.doc_ids)}
@@ -90,161 +87,76 @@ def rag_reindex():
 
 @app.post("/rag/retrieve")
 def rag_retrieve(data: dict):
-    """Retrieve top_k passages for a query"""
     q = data.get("query", "")
     top_k = int(data.get("top_k", 5))
+
     if not q:
         raise HTTPException(status_code=400, detail="query required")
-    hits = RAG.retrieve(q, top_k=top_k)
-    # return list of dicts
-    out = []
-    for doc_id, excerpt, score in hits:
-        out.append({"doc_id": doc_id, "excerpt": excerpt, "score": score})
+
+    hits = RAG.retrieve(q, top_k)
+    out = [{"doc_id": d, "excerpt": t, "score": s} for (d, t, s) in hits]
     return {"query": q, "hits": out}
 
 
 @app.post("/rag/answer")
 def rag_answer(data: dict):
-    """
-    Retrieve contexts and return a synthesized answer.
-    If OPENAI_API_KEY is set in environment, the backend will call OpenAI to generate
-    a nicer final answer. Otherwise, it returns the top contexts concatenated.
-    """
     q = data.get("query", "")
-    top_k = int(data.get("top_k", 3))
     if not q:
         raise HTTPException(status_code=400, detail="query required")
 
-    context = RAG.get_context(q, top_k=top_k)
+    ctx = RAG.get_context(q, top_k=3)
+    return {"query": q, "answer": None, "context": ctx}
 
-    # If OPENAI_API_KEY is present, call OpenAI to generate an answer (optional)
-    openai_key = os.getenv("OPENAI_API_KEY")
-    if openai_key:
-        try:
-            import openai
-            openai.api_key = openai_key
-            prompt = (
-                f"You are an expert battery engineer. Use the provided context to answer the question.\n\n"
-                f"CONTEXT:\n{context}\n\nQUESTION:\n{q}\n\nAnswer concisely and cite sources by filename (Source: ...)."
-            )
-            resp = openai.ChatCompletion.create(
-                model="gpt-4o-mini",  # replace with available model if needed
-                messages=[{"role":"user","content":prompt}],
-                max_tokens=400,
-                temperature=0.1
-            )
-            answer = resp["choices"][0]["message"]["content"].strip()
-            return {"query": q, "answer": answer, "context": context}
-        except Exception as e:
-            # fall back to returning context if OpenAI call fails
-            return {"query": q, "answer": None, "context": context, "warning": str(e)}
-    else:
-        # No LLM available — return retrieved context so frontend can display it
-        return {"query": q, "answer": None, "context": context}
 
+# ------------------ ROOT ------------------
 
 @app.get("/")
 def root():
-    """Root endpoint"""
-    return {
-        "message": "PINN Inference API",
-        "status": "running",
-        "endpoints": {
-            "health": "/health",
-            "predict": "/predict (POST)"
-        }
-    }
+    return {"status": "running", "api": "Battery AI"}
 
 
-@app.get("/health")
-def health():
-    """Health check endpoint"""
-    return {
-        "status": "ok",
-        "model_loaded": model is not None,
-        "metadata_loaded": meta is not None,
-        "templates_loaded": templates is not None
-    }
-
+# ------------------ PREDICT ------------------
 
 @app.post("/predict")
 def predict(features: dict, x_api_key: str = Header(None, alias="X-API-Key")):
-    """
-    Prediction endpoint
-    
-    Headers:
-        X-API-Key: Your API key
-        
-    Body:
-        JSON object with feature names and values
-        Example: {"feature1": 0.5, "feature2": 1.2, ...}
-    """
-    # Check if API key is required and validate
     if API_KEY and x_api_key != API_KEY:
-        raise HTTPException(
-            status_code=403, 
-            detail="Invalid or missing API key. Include X-API-Key header."
-        )
-    
-    # Check if model is loaded
+        raise HTTPException(403, "Invalid API key")
+
     if model is None or meta is None:
-        raise HTTPException(
-            status_code=503,
-            detail="Model not loaded. Service temporarily unavailable."
-        )
-    
+        raise HTTPException(503, "Model not loaded")
+
     try:
-        # Extract features in correct order
         x = []
-        missing_features = []
-        
+        missing = []
+
         for name in meta["feature_names"]:
             if name not in features:
-                missing_features.append(name)
+                missing.append(name)
             else:
                 x.append(features[name])
-        
-        if missing_features:
-            raise HTTPException(
-                status_code=400,
-                detail=f"Missing required features: {missing_features}"
-            )
-        
-        # Prepare input and predict
+
+        if missing:
+            raise HTTPException(400, f"Missing: {missing}")
+
         x = np.array(x).reshape(1, -1)
         y = model.predict(x, verbose=0)
-        
-        return {
-            "output": float(y[0][0]),
-            "status": "success"
-        }
-        
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"Prediction error: {str(e)}")
-        raise HTTPException(
-            status_code=500,
-            detail=f"Prediction failed: {str(e)}"
-        )
 
+        return {"output": float(y[0][0]), "status": "success"}
+
+    except Exception as e:
+        raise HTTPException(500, f"Prediction error: {str(e)}")
+
+
+# ------------------ INFO ------------------
 
 @app.get("/info")
 def info():
-    """Get information about required features"""
-    if meta is None:
-        raise HTTPException(
-            status_code=503,
-            detail="Metadata not loaded"
-        )
-    
     return {
-        "feature_names": meta.get("feature_names", []),
-        "num_features": len(meta.get("feature_names", [])),
-        "templates_available": templates is not None
+        "features": meta.get("feature_names", []),
+        "num": len(meta.get("feature_names", [])),
+        "templates": templates is not None
     }
 
 
 if __name__ == "__main__":
-    
     uvicorn.run(app, host="0.0.0.0", port=8000)
