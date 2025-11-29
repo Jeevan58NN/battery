@@ -1,4 +1,4 @@
-
+from custom_pinn import PINN, ResidualBlock
 from fastapi import FastAPI, Header, HTTPException
 import tensorflow as tf
 import joblib
