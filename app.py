@@ -31,10 +31,20 @@ async def startup_event():
     try:
         logger.info(f"Working directory: {os.getcwd()}")
         logger.info(f"Files in directory: {os.listdir('.')}")
-        
+
         # Load model
         logger.info("Loading PINN model...")
-        model = tf.keras.models.load_model("pinn_inference.keras", compile=False)
+
+        custom_objects = {
+            "PINN": PINN,
+            "ResidualBlock": ResidualBlock
+        }
+
+        model = tf.keras.models.load_model(
+            "pinn_inference.keras",
+            compile=False,
+            custom_objects=custom_objects
+        )
         logger.info("✓ Model loaded successfully")
         
         # Load metadata
