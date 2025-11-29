@@ -1,0 +1,190 @@
+BATTERY MEGA KNOWLEDGE DOCUMENT  
+A complete reference for RAG-based battery question answering.  
+
+----------------------------------------------------
+1. BATTERY BASICS
+----------------------------------------------------
+A battery is an electrochemical device that converts chemical energy into electrical energy.  
+Major components:
+- Cathode (Positive)
+- Anode (Negative)
+- Electrolyte (Ion conductor)
+- Separator (Ion-permeable insulating layer)
+- Current Collectors (Al for cathode, Cu for anode)
+
+Lithium ions move:
+- Discharge: Anode → Cathode
+- Charge: Cathode → Anode
+
+----------------------------------------------------
+2. CATHODE MATERIALS
+----------------------------------------------------
+LFP (Lithium Iron Phosphate)
+- High safety, long cycle life, low cost, medium energy density
+- Voltage: 3.2–3.3V
+
+NMC (Nickel-Manganese-Cobalt)
+- High energy density, used in EVs
+- Types: NMC111, NMC532, NMC622, NMC811
+- Voltage: 3.6–3.7V
+
+LCO (Lithium Cobalt Oxide)
+- High energy density, used in phones
+- Voltage: 3.7V
+
+NCA (Nickel-Cobalt-Aluminum)
+- High energy & long cycle life, used by Tesla
+- Voltage: 3.6–3.7V
+
+----------------------------------------------------
+3. ANODE MATERIALS
+----------------------------------------------------
+Graphite  
+- Most common, stable, low cost  
+- Limits fast charging due to SEI formation
+
+Silicon-Graphite  
+- Higher capacity  
+- Silicon expands during cycling → swelling
+
+Hard Carbon  
+- For sodium-ion batteries  
+- Performs well at low temperatures  
+
+LTO (Lithium Titanate)  
+- Very safe, 10k+ cycles, fast charging  
+- Low energy density  
+
+----------------------------------------------------
+4. ELECTROLYTES
+----------------------------------------------------
+Typical electrolyte:
+- LiPF6 salt in EC/EMC/DEC solvents.
+
+Common additives:
+- FEC: Stabilizes SEI
+- VC: Controls gas formation
+- DTD: Improves cycle life
+
+----------------------------------------------------
+5. SEI LAYER (Solid Electrolyte Interphase)
+----------------------------------------------------
+Forms on anode during initial charging.  
+Functions:
+- Prevents continuous electrolyte decomposition  
+- Enables lithium-ion movement  
+Problems:
+- Too thick → high resistance  
+- Too thin → unstable  
+
+----------------------------------------------------
+6. CELL FORMATS
+----------------------------------------------------
+1. Cylindrical (18650, 21700)
+- Strong shell, good thermal performance
+
+2. Prismatic
+- High energy density, aluminum casing
+
+3. Pouch
+- Lightweight, needs compression
+
+----------------------------------------------------
+7. BATTERY MANUFACTURING PROCESS
+----------------------------------------------------
+1. Mixing (active materials + binders)  
+2. Coating on Al/Cu foil  
+3. Drying  
+4. Calendering (density control)  
+5. Slitting  
+6. Stacking/Winding  
+7. Electrolyte filling  
+8. Formation (SEI creation)  
+9. Aging  
+10. Testing  
+
+----------------------------------------------------
+8. SAFETY & FAILURE MODES
+----------------------------------------------------
+Failures:
+- Internal short circuit
+- Thermal runaway
+- Lithium plating
+- Gas generation
+- Separator shrinkage
+
+Safety mechanisms:
+- BMS
+- CID, PTC
+- Additives (FEC/VC)
+
+----------------------------------------------------
+9. BATTERY DEGRADATION
+----------------------------------------------------
+- SEI growth
+- Lithium plating
+- Particle cracking
+- Electrolyte decomposition
+- Increased internal resistance  
+
+----------------------------------------------------
+10. LFP VS NMC
+----------------------------------------------------
+LFP:
+- Safer, cheaper, long life  
+- Medium energy density  
+
+NMC:
+- Higher energy  
+- More expensive  
+- Moderate safety  
+
+----------------------------------------------------
+11. BATTERY PACK COMPONENTS
+----------------------------------------------------
+- Cells (series/parallel)  
+- BMS  
+- Cooling system  
+- Contactor  
+- Fuse  
+- Busbars  
+- Enclosure  
+
+----------------------------------------------------
+12. BASIC BATTERY CALCULATIONS
+----------------------------------------------------
+Energy = Voltage × Capacity  
+Pack Voltage = Cell voltage × Series count  
+Pack Ah = Ah × Parallel count  
+Heat loss = I² × R  
+
+----------------------------------------------------
+13. BATTERY COMBINATIONS
+----------------------------------------------------
+- LFP + LTO → ultra-safe, long life  
+- Graphite + Silicon composite → high energy  
+- LMFP (Mn-doped LFP) → higher voltage  
+- Hard carbon + sodium cathode → sodium-ion systems  
+
+----------------------------------------------------
+14. FACTORS AFFECTING LIFESPAN
+----------------------------------------------------
+- Temperature  
+- Depth of discharge  
+- Charge current  
+- Chemistry  
+- SEI stability  
+- Storage time  
+
+----------------------------------------------------
+15. MODERN BATTERY INNOVATIONS
+----------------------------------------------------
+- Solid-state batteries  
+- Sodium-ion cells  
+- Silicon-rich anodes  
+- Dry electrode coating  
+- Ultra-fast charging technology  
+- LMFP  
+----------------------------------------------------
+
+END OF DOCUMENT
