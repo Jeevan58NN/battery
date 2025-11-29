@@ -28,53 +28,51 @@ templates = None
 
 @app.on_event("startup")
 async def startup_event():
-    """Load model, metadata, templates, and RAG index on startup"""
     global model, meta, templates
-    
+
     try:
         logger.info(f"Working directory: {os.getcwd()}")
-        logger.info(f"Files in directory: {os.listdir('.')}")
+        logger.info(f"Files: {os.listdir('.')}")
 
-        # ---------------- Load PINN model ----------------
-        logger.info("Loading PINN model...")
-
-        custom_objects = {
-            "PINN": PINN,
-            "ResidualBlock": ResidualBlock
-        }
-
+        # ---- Load PINN Model ----
+        custom_objects = {"PINN": PINN, "ResidualBlock": ResidualBlock}
         model = tf.keras.models.load_model(
-            "pinn_inference.keras",
-            compile=False,
-            custom_objects=custom_objects
+            "pinn_inference.keras", compile=False, custom_objects=custom_objects
         )
-        logger.info("✓ Model loaded successfully")
-        
-        # ---------------- Load metadata ----------------
-        logger.info("Loading metadata...")
+        logger.info("✓ PINN model loaded")
+
+        # ---- Load Metadata ----
         meta = joblib.load("pinn_meta_full.pkl")
-        logger.info("✓ Metadata loaded successfully")
-        
-        # ---------------- Load templates ----------------
-        logger.info("Loading material templates...")
+        logger.info("✓ Metadata loaded")
+
+        # ---- Templates ----
         with open("material_templates.json", "r") as f:
             templates = json.load(f)
-        logger.info("✓ Templates loaded successfully")
+        logger.info("✓ Templates loaded")
 
     except Exception as e:
-        logger.error(f"❌ Failed to load model/meta/templates: {str(e)}")
+        logger.error(f"❌ Model/Metadata load failed: {e}")
         raise
+    
+    # ---- RAG Index Load ----
+    try:
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        DOCS_DIR = os.path.join(BASE_DIR, "docs")
+
+        logger.info(f"RAG docs folder: {DOCS_DIR}")
+
+        RAG.load_index(DOCS_DIR)
+        if not RAG.vectorizer:
+            logger.info("Building new RAG index...")
+            RAG.build_index_from_folder(DOCS_DIR)
+
+        logger.info(f"✓ RAG index ready with {len(RAG.doc_ids)} docs")
+
+    except Exception as e:
+        logger.warning(f"⚠️ RAG index failed: {e}")
 
     # ---------------- Load or Build RAG Index ----------------
-    try:
-        RAG.load_index()      # load index if already built
-        if not RAG.vectorizer:
-            # build index if first time
-            RAG.build_index_from_folder("docs")
-        logger.info(f"✓ RAG index loaded. Total docs: {len(RAG.doc_ids)}")
-
-    except Exception as e:
-        logger.warning(f"⚠️ RAG index load/build failed: {e}")
+    
 
 
 
