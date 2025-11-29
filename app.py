@@ -7,6 +7,9 @@ import json
 import os
 import logging
 import uvicorn
+from rag import RAG
+from pathlib import Path
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -25,14 +28,14 @@ templates = None
 
 @app.on_event("startup")
 async def startup_event():
-    """Load model and data files on startup"""
+    """Load model, metadata, templates, and RAG index on startup"""
     global model, meta, templates
     
     try:
         logger.info(f"Working directory: {os.getcwd()}")
         logger.info(f"Files in directory: {os.listdir('.')}")
 
-        # Load model
+        # ---------------- Load PINN model ----------------
         logger.info("Loading PINN model...")
 
         custom_objects = {
@@ -47,22 +50,99 @@ async def startup_event():
         )
         logger.info("✓ Model loaded successfully")
         
-        # Load metadata
+        # ---------------- Load metadata ----------------
         logger.info("Loading metadata...")
         meta = joblib.load("pinn_meta_full.pkl")
         logger.info("✓ Metadata loaded successfully")
         
-        # Load templates
+        # ---------------- Load templates ----------------
         logger.info("Loading material templates...")
         with open("material_templates.json", "r") as f:
             templates = json.load(f)
         logger.info("✓ Templates loaded successfully")
-        
-        logger.info("All resources loaded. API ready!")
-        
+
     except Exception as e:
-        logger.error(f"❌ Failed to load resources: {str(e)}")
+        logger.error(f"❌ Failed to load model/meta/templates: {str(e)}")
         raise
+
+    # ---------------- Load or Build RAG Index ----------------
+    try:
+        RAG.load_index()      # load index if already built
+        if not RAG.vectorizer:
+            # build index if first time
+            RAG.build_index_from_folder("docs")
+        logger.info(f"✓ RAG index loaded. Total docs: {len(RAG.doc_ids)}")
+
+    except Exception as e:
+        logger.warning(f"⚠️ RAG index load/build failed: {e}")
+
+
+
+# ---------------- RAG endpoints ----------------
+
+@app.post("/rag/reindex")
+def rag_reindex():
+    """Rebuild index from /docs folder (use after uploading docs)"""
+    try:
+        RAG.build_index_from_folder("docs")
+        return {"status": "ok", "n_docs": len(RAG.doc_ids)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/rag/retrieve")
+def rag_retrieve(data: dict):
+    """Retrieve top_k passages for a query"""
+    q = data.get("query", "")
+    top_k = int(data.get("top_k", 5))
+    if not q:
+        raise HTTPException(status_code=400, detail="query required")
+    hits = RAG.retrieve(q, top_k=top_k)
+    # return list of dicts
+    out = []
+    for doc_id, excerpt, score in hits:
+        out.append({"doc_id": doc_id, "excerpt": excerpt, "score": score})
+    return {"query": q, "hits": out}
+
+
+@app.post("/rag/answer")
+def rag_answer(data: dict):
+    """
+    Retrieve contexts and return a synthesized answer.
+    If OPENAI_API_KEY is set in environment, the backend will call OpenAI to generate
+    a nicer final answer. Otherwise, it returns the top contexts concatenated.
+    """
+    q = data.get("query", "")
+    top_k = int(data.get("top_k", 3))
+    if not q:
+        raise HTTPException(status_code=400, detail="query required")
+
+    context = RAG.get_context(q, top_k=top_k)
+
+    # If OPENAI_API_KEY is present, call OpenAI to generate an answer (optional)
+    openai_key = os.getenv("OPENAI_API_KEY")
+    if openai_key:
+        try:
+            import openai
+            openai.api_key = openai_key
+            prompt = (
+                f"You are an expert battery engineer. Use the provided context to answer the question.\n\n"
+                f"CONTEXT:\n{context}\n\nQUESTION:\n{q}\n\nAnswer concisely and cite sources by filename (Source: ...)."
+            )
+            resp = openai.ChatCompletion.create(
+                model="gpt-4o-mini",  # replace with available model if needed
+                messages=[{"role":"user","content":prompt}],
+                max_tokens=400,
+                temperature=0.1
+            )
+            answer = resp["choices"][0]["message"]["content"].strip()
+            return {"query": q, "answer": answer, "context": context}
+        except Exception as e:
+            # fall back to returning context if OpenAI call fails
+            return {"query": q, "answer": None, "context": context, "warning": str(e)}
+    else:
+        # No LLM available — return retrieved context so frontend can display it
+        return {"query": q, "answer": None, "context": context}
 
 
 @app.get("/")
