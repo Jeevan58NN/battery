@@ -9,12 +9,21 @@ import logging
 import uvicorn
 from rag import RAG
 from pathlib import Path
-
+from fastapi.middleware.cors import CORSMiddleware
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Battery AI (PINN + RAG)")
 
+
+# Allow frontend to connect
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # allow all (for testing)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 API_KEY = os.getenv("API_KEY")
 
 model = None
