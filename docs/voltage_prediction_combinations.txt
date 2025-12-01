@@ -1,0 +1,30 @@
+# Voltage Prediction – Material Combination Logic
+
+1. Predict the cell voltage:
+   V_cell = V_cathode - V_anode
+
+2. Common combinations:
+   - NMC + Graphite → 3.6–3.7 V nominal
+   - NMC + Hard Carbon → +0.05V more
+   - LNMO + Graphite → 4.7–4.8 V
+   - LNMO + Hard Carbon → up to 4.9 V
+   - LCO + Graphite → 3.9–4.2 V
+   - LFP + Graphite → 3.2–3.3 V
+   - LFP + LTO → 1.9–2.2 V (low voltage)
+
+3. To reach 5V:
+   - You need cathode ≥ 4.8V
+   - Options:
+       • LNMO (Spinel)  
+       • Li-rich Mn-based cathodes (LRLO)  
+       • High-voltage NMC (doped)
+
+4. To reach 6V:
+   - Not possible with standard anodes (graphite)
+   - Requires:
+       • Li-metal anode
+       • Solid electrolyte (LLZO)
+
+5. Voltage Boosting Strategy:
+   - Use hard carbon instead of graphite → raises voltage 0.05–0.1V
+   - Reduce anode overhang → small voltage increase
