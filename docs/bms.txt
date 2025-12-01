@@ -1,0 +1,62 @@
+1. WHAT IS A BMS?
+
+BMS = Battery Management System
+It is the "brain" of the battery pack.
+
+Main functions:
+- Monitor
+- Protect
+- Estimate
+- Communicate
+
+
+2. KEY FUNCTIONS
+
+Monitoring:
+- Cell voltages
+- Pack voltage
+- Charge/discharge current
+- Temperatures at different points
+
+Protection:
+- Cut off charging if voltage too high
+- Cut off discharging if voltage too low
+- Limit current if too high
+- Shut down if temperature is unsafe
+
+Estimation:
+- SOC (State of Charge)
+- SOH (State of Health)
+- Remaining range (for EVs)
+
+Balancing:
+- Equalize voltages between cells
+- Can be passive (bleeding resistors) or active (charge transfer)
+
+
+3. SOC ESTIMATION METHODS (BASIC VIEW)
+
+- Coulomb counting:
+  - Integrate current over time
+  - Needs accurate current measurement and drift correction
+
+- Voltage-based:
+  - Use open-circuit voltage vs SOC curve
+  - Works when battery is at rest
+
+- Model-based:
+  - Uses equivalent circuit models and filters (e.g., Kalman filter)
+  - More accurate but more complex
+
+
+4. IMPORTANCE OF BMS
+
+Without BMS:
+- High risk of overcharge/overdischarge
+- Shorter battery life
+- Unsafe operation
+
+With good BMS:
+- Longer cycle life
+- Better user experience (range prediction)
+- Safety compliance
