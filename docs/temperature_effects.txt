@@ -1,0 +1,25 @@
+TEMPERATURE PERFORMANCE RULES
+
+1. Cold Temperature (<10°C):
+- Ion mobility drops → higher resistance
+- Graphite risk: lithium plating
+- Use LTO or graphite with low-temp electrolyte
+
+Capacity drops:
+- At 0°C → -20 to -30%
+- At -10°C → -40 to -60%
+
+2. Hot Temperature (>45°C):
+- SEI breakdown accelerates
+- High-Ni materials gas heavily
+- Use LFP or LMO
+
+3. Ideal Temperature:
+- 20–30°C
+
+4. If user asks:
+“What happens at ___ °C?”
+→ Check:
+   - electrolyte stability
+   - SEI health
+   - cathode thermal stability
