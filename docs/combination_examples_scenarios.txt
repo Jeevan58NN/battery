@@ -1,0 +1,53 @@
+# Battery Combination Example Scenarios (Quiz-Style)
+
+1. Scenario:
+   Anode = Graphite
+   Electrolyte = EC/DMC + LiPF6
+   Temp = 25°C
+   Requirement = 5V, 3A output
+
+   Answer:
+   • Use LNMO cathode (4.7–5.0V)  
+   • Add LiBOB + LiFSI additives for stability  
+   • Reduce cathode thickness to ~55 µm for 3A  
+   • Recommended separator: ceramic-coated PP  
+
+2. Scenario:
+   Anode = Hard Carbon
+   Temperature = 50°C
+   Need = High current (5A)
+
+   Answer:
+   • Use NMC532 cathode  
+   • Electrolyte must be EC-free (use EMC + LiFSI)  
+   • Increase cathode carbon % to 6%  
+
+3. Scenario:
+   Anode = LTO
+   Requirement = Extreme long cycle life
+
+   Answer:
+   • Use LFP cathode  
+   • Voltage ≈ 2.2V  
+   • Use any standard electrolyte  
+   • Cycle life > 6000 cycles  
+
+4. Scenario:
+   Anode = Graphite  
+   Cathode = NMC811  
+   Need = Lower heat at 3C
+
+   Answer:
+   • Use electrolyte with 1% VC + 2% FEC  
+   • Reduce N/P ratio to 1.05  
+   • Use thinner electrode to reduce impedance  
+
+5. Scenario:
+   Target = Safety priority  
+   Temperature = 55°C  
+   Voltage = ~3.2V
+
+   Answer:
+   • Choose LFP cathode + Graphite  
+   • Use ceramic separator  
+   • Use FEC additive for SEI stability  
