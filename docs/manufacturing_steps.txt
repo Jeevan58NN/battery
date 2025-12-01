@@ -1,0 +1,71 @@
+1. ELECTRODE MANUFACTURING
+
+Slurry preparation:
+- Active material (e.g., NMC, LFP, graphite)
+- Conductive additives (e.g., carbon black)
+- Binder (PVDF, CMC/SBR)
+- Solvent (NMP for PVDF, water for CMC/SBR)
+- Mixed in a high-shear mixer to form uniform slurry
+
+Coating:
+- Slurry is coated on:
+  - Aluminum foil for cathode
+  - Copper foil for anode
+- Using slot-die or comma-coater
+
+Drying:
+- Solvent is evaporated in ovens
+- Proper drying avoids cracks and ensures adhesion
+
+Calendaring:
+- Electrodes are passed through rollers
+- Adjusted to required thickness and density
+- Impacts porosity, energy density, and rate capability
+
+Slitting:
+- Coated foils are cut into appropriate widths
+
+
+2. CELL ASSEMBLY
+
+Cell formats:
+- Cylindrical (e.g., 18650, 21700)
+- Prismatic
+- Pouch
+
+Main steps:
+- Electrode cutting into final shapes
+- Stacking (prismatic, pouch) or winding (cylindrical)
+- Adding separator between anode and cathode
+- Welding tabs and current collectors
+- Inserting into can (or pouch forming)
+- Drying in dry room to remove moisture
+
+3. ELECTROLYTE FILLING
+
+- Done in dry room or vacuum chamber
+- Electrolyte (e.g., LiPF6 in organic solvent) is injected
+- Vacuum helps remove trapped air and ensure full wetting
+
+4. FORMATION AND AGING
+
+Formation:
+- First few charge–discharge cycles at controlled rates
+- SEI layer forms on the anode
+- Very critical step for battery life
+
+Aging:
+- Cells are stored at controlled temperature for some days
+- To stabilize SEI and electrode–electrolyte interfaces
+- After aging, cells are graded (capacity, impedance, leakage)
+
+5. PACK ASSEMBLY
+
+- Cells grouped into modules
+- Modules grouped into pack
+- Add BMS, sensors, cooling plates, busbars, fuses, enclosure
+
+Quality Control:
+- Capacity test
+- Leakage and insulation test
+- Safety and reliability tests at cell, module, and pack levels
