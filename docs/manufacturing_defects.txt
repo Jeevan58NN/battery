@@ -1,0 +1,22 @@
+MANUFACTURING DEFECTS AND THEIR EFFECTS
+
+1. Over-Calendered Electrode:
+- Low porosity → poor ion movement
+- Results: low power, high heat
+- Fix: reduce calender pressure by 5–10%
+
+2. Under-Calendered Electrode:
+- Too porous → low energy density
+- Fix: increase pressure slightly
+
+3. Poor Mixing:
+- Slurry not uniform → inconsistent capacity
+- Fix: increase mixing time, improve binder mixing sequence
+
+4. Electrode Misalignment:
+- Causes internal shorts or uneven SEI
+
+5. Improper Drying:
+- Moisture reacts with LiPF6 → HF formation → gas generation
+
+Bot must identify and recommend manufacturing fixes.
