@@ -1,0 +1,16 @@
+POWER CURVE ESTIMATION RULES
+
+1. Power output P = V × I decreases with:
+- Higher internal resistance
+- Low temperature
+- Low SOC
+
+2. High-power materials:
+- LMO
+- LFP
+- NMC 532
+
+3. If user wants higher power:
+- Reduce thickness
+- Increase porosity
+- Improve electrolyte ionic conductivity
