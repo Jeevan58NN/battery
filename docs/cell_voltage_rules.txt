@@ -1,0 +1,40 @@
+CELL VOLTAGE DESIGN RULES
+
+1. Voltage of a Li-ion cell is determined mainly by:
+- Cathode redox potential
+- Anode redox potential
+- Electrolyte stability window
+
+General rule:
+Cell voltage = Cathode potential – Anode potential
+
+Typical potentials vs Li/Li+:
+- Graphite anode: ~0.1 V
+- Silicon anode: 0.2–0.4 V
+- LTO (Lithium Titanate) anode: 1.55 V
+
+Cathode potentials:
+- LFP: ~3.45 V
+- NMC 622: ~3.8 V
+- NMC 811: ~3.9 V
+- NCA: ~3.9 V
+- LCO: ~4.0 V
+- High-voltage spinel LMO: ~4.7 V
+
+Therefore:
+- Graphite + LFP → 3.2–3.3 V cell
+- Graphite + NMC → 3.6–3.7 V cell
+- Graphite + LCO → 3.7 V cell
+- Graphite + high-voltage LMO → up to 4.7 V cell
+- LTO + LFP → ~1.9–2.0 V cell (very safe but low voltage)
+
+TO REACH 5 VOLT CELL:
+→ No standard Li-ion chemistry gives stable 5 V.
+→ Requires:
+  - High-voltage cathode (LiNi0.5Mn1.5O4 spinel at ~4.7 V)
+  - Very stable electrolyte (requires fluorinated solvents)
+  - Anode must be graphite or silicon-graphite
+  - Additives: LiDFOB, LiFSI, PES additive for stability
+
+If user asks:
+"I need 5V cell" → Suggest 4.7 V spinel + Si/C composite + HV electrolyte
