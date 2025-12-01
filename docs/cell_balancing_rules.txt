@@ -1,0 +1,17 @@
+CELL BALANCING RULES (FOR BATTERY PACKS)
+
+1. Cells in series MUST be balanced or pack fails.
+
+2. Passive balancing:
+- Burn excess energy through resistors.
+
+3. Active balancing:
+- Move charge between cells.
+- Used in EVs.
+
+4. If user asks:
+“My pack is unbalanced”
+→ Recommend:
+  - reduce charging voltage temporarily
+  - run balance cycle
+  - check internal resistance mismatch
