@@ -10,6 +10,8 @@ import uvicorn
 from rag import RAG
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
+from pinn_rules import recommend_materials
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -81,6 +83,39 @@ async def startup_event():
         logger.info(f"✓ RAG Ready. Docs: {len(RAG.doc_ids)}")
     except Exception as e:
         logger.warning(f"⚠️ RAG start failed: {e}")
+
+
+@app.post("/smart-answer")
+def smart_answer(data: dict):
+    """
+    Combines RAG + Rule Engine + (optional) PINN prediction
+    """
+    anode = data.get("anode")
+    electrolyte = data.get("electrolyte")
+    temp = float(data.get("temperature", 25))
+    target_v = float(data.get("target_voltage", 3.7))
+    target_a = float(data.get("target_current", 1.0))
+
+    # -------- RULE ENGINE --------
+    rule_out = recommend_materials(
+        anode=anode,
+        electrolyte=electrolyte,
+        temp=temp,
+        target_v=target_v,
+        target_a=target_a
+    )
+
+    # -------- RAG CONTEXT --------
+    query = f"{anode} {electrolyte} {target_v}V {target_a}A {temp}C battery"
+    rag_context = RAG.get_context(query, top_k=2)
+
+    # -------- RETURN FINAL ANSWER --------
+    return {
+        "recommendation": rule_out,
+        "supporting_docs": rag_context
+    }
+
+
 
 
 # ------------------ RAG Endpoints ------------------
