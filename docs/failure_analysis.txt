@@ -1,0 +1,24 @@
+FAILURE DIAGNOSIS RULES
+
+Common failures:
+1. Lithium Plating
+- Caused by: fast charging, cold temperature
+- Fix: reduce charge rate, increase temperature, use FEC additive
+
+2. SEI Cracking
+- Caused by silicon expansion
+- Fix: use elastic binders (CMC/SBR), add FEC
+
+3. Thermal Runaway
+- Caused by internal short, gas evolution
+- Fix: use LFP, shutdown separator, BMS protection
+
+4. Gas Formation
+- Caused by electrolyte breakdown
+- Fix: lower upper voltage, add additives, use high-stability electrolytes
+
+5. Capacity Fade
+- Caused by cathode dissolution or loss of lithium inventory
+- Fix: reduce voltage limit, improve SEI
+
+Bot must analyze symptoms → map to cause → give solution.
