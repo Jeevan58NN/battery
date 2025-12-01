@@ -1,0 +1,51 @@
+1. WHY THERMAL MANAGEMENT IS IMPORTANT
+
+Battery performance and life are strongly affected by temperature.
+Ideal operating range (approx):
+- 20–35°C for many Li-ion chemistries
+
+High temperature:
+- Increases side reactions
+- Speeds up degradation
+- Can lead to thermal runaway
+
+Low temperature:
+- Increases internal resistance
+- Reduces power and capacity
+- Increases risk of lithium plating during charging
+
+
+2. THERMAL MANAGEMENT METHODS
+
+Air cooling:
+- Simple fans and air channels around modules
+- Used in some hybrids and smaller packs
+
+Liquid cooling:
+- Coolant channels or cold plates in contact with cells/modules
+- More effective for large EV packs
+- Allows uniform temperature control
+
+Refrigerant-based:
+- Uses vehicle AC refrigerant circuit
+- Direct cooling of pack (more complex but efficient)
+
+Heating:
+- Resistive heating elements
+- Heat pumps reusing waste heat
+- Needed in cold climates
+
+
+3. DESIGN GOALS
+
+- Keep all cells within safe temperature range
+- Minimize temperature gradient between cells
+- Quickly remove heat during fast charging and high power discharge
+- Support pre-conditioning (pre-heat or pre-cool before use)
+
+
+4. THERMAL RUNAWAY PROPAGATION CONTROL
+
+- Use thermal barriers between cells
+- Use non-flammable materials where possible
+- Design venting paths away from passengers (in EVs)
