@@ -1,0 +1,33 @@
+# Battery Combination Rules – Basic (Voltage, Amp Output, Compatibility)
+
+1. Voltage is determined by:  Cathode V_max  –  Anode V
+   Typical:
+   - Graphite (0.1V)
+   - Hard Carbon (0.05–0.1V)
+   - LTO (1.6V) → LOW VOLTAGE CELLS ONLY
+
+2. Required Voltage Formula:
+   Cathode V_max ≈ Target Voltage + Anode Voltage
+
+   Example:
+   Target = 5V, Anode = Graphite (0.1V)
+   Required Cathode ≈ 5.1V → Options:
+       - LNMO (4.7V) *needs special electrolyte*
+       - HED NMC (4.5–4.8V)
+
+3. Current Output (Amps) depends on:
+   - Cathode particle size (smaller → higher current)
+   - Electrode thickness (thinner → higher current)
+   - Electrolyte ionic conductivity
+   - Temperature: conductivity ↑ with heat (up to 45°C)
+   - Carbon percentage in both electrodes
+
+4. Temperature Rules:
+   - > 50°C → Avoid EC-based electrolytes, use FEC or borate additives.
+   - < 0°C → Avoid graphite, use LTO.
+   - 20–35°C → All chemistries normal.
+
+5. Electrolyte Compatibility:
+   - High voltage: needs additives (LiDFOB, LiFSI, LiBOB).
+   - LNMO cathode: must use HF-resistant electrolyte.
+   - LTO: works with almost all standard electrolytes.
