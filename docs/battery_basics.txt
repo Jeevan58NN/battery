@@ -1,0 +1,96 @@
+1. WHAT IS A BATTERY?
+
+A battery is a device that converts chemical energy into electrical energy.
+It does this using a REDOX (reduction–oxidation) reaction.
+
+Basic parts of a rechargeable Li-ion cell:
+- Cathode: positive electrode (usually metal oxide)
+- Anode: negative electrode (usually carbon/graphite)
+- Electrolyte: liquid or solid medium that carries Li+ ions
+- Separator: porous plastic film that prevents short circuit but allows ions
+- Current collectors: Al foil (cathode) and Cu foil (anode)
+- Casing: cylinder, pouch, or prismatic can
+
+When charging:
+- Li+ ions move from cathode → anode through the electrolyte
+- Electrons move through the external circuit into the anode
+
+When discharging:
+- Li+ move from anode → cathode
+- Electrons flow through the external load and do useful work
+
+
+2. IMPORTANT TERMS
+
+Cell: Single electrochemical unit (e.g., one 18650 cell)
+Module: Group of cells connected together
+Pack: Group of modules with BMS, cooling, sensors, casing
+
+Capacity (Ah or mAh):
+- How much charge the battery can store
+- Higher capacity → runs a device longer
+
+Voltage (V):
+- Electrical potential difference
+- Nominal voltage of Li-ion cell ≈ 3.6–3.7 V (depends on chemistry)
+
+Energy (Wh):
+- Energy = Capacity (Ah) × Voltage (V)
+- Example: 3 Ah × 3.7 V = 11.1 Wh
+
+Energy density:
+- Energy per unit mass (Wh/kg) or volume (Wh/L)
+- Higher energy density → higher range for EVs
+
+Power density:
+- How fast energy can be delivered (W/kg)
+- Important for acceleration, drones, power tools
+
+Cycle life:
+- Number of full charge–discharge cycles before capacity falls to ~80% of original
+
+
+3. TYPES OF RECHARGEABLE BATTERIES
+
+Lithium-ion (Li-ion)
+- Most common in phones, laptops, EVs
+- High energy density
+- Many cathode chemistries (LFP, NMC, NCA, etc.)
+
+Lithium polymer (LiPo)
+- Li-ion but with polymer-type electrolyte or pouch packaging
+
+Lead-acid
+- Cheap, used in cars for starting, lighting, ignition (SLI)
+- Low energy density, heavy
+
+Nickel-Metal Hydride (NiMH)
+- Used in some hybrid vehicles and older electronics
+
+Sodium-ion (Na-ion)
+- Emerging technology
+- Uses Na+ instead of Li+
+- Lower cost and good for stationary storage
+
+
+4. HOW CELLS ARE ARRANGED
+
+Series connection:
+- Voltages add up, capacity stays same
+- Example: 3 cells in series (3S) of 3.7 V each → 11.1 V
+
+Parallel connection:
+- Capacities add up, voltage stays same
+- Example: 2 cells in parallel (2P) of 2 Ah each → 4 Ah total
+
+Packs use combinations:
+- Example: 96S4P pack in EV → high voltage and high capacity
+
+
+5. WHERE BATTERIES ARE USED
+
+- Consumer electronics (phones, laptops, wearables)
+- Electric vehicles (2W, 3W, cars, buses)
+- Energy storage systems (home, grid-level)
+- Drones and UAVs
+- Power tools and industrial applications
