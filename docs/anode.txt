@@ -1,0 +1,64 @@
+1. ROLE OF ANODE
+
+The anode is the negative electrode in a Li-ion battery.
+During charging, Li+ ions store in the anode.
+During discharge, Li+ leave the anode and go to the cathode.
+
+A good anode:
+- Stores a lot of Li+ (high specific capacity)
+- Maintains structure during cycling
+- Forms stable SEI (Solid Electrolyte Interphase)
+- Has good electrical conductivity
+
+
+2. COMMON ANODE MATERIALS
+
+Graphite (most widely used)
+- Structure: layered carbon
+- Theoretical capacity ~372 mAh/g
+- Li+ intercalates between carbon layers (forming LiC6)
+- Pros: Mature, stable, good cycle life, cheap
+- Cons: Limited capacity, risk of lithium plating at high rates or low temperature
+
+Hard Carbon
+- Disordered carbon, used in sodium-ion batteries
+- Larger pores and defects
+- Pros: Suitable for Na+ storage, good for low-temperature performance
+- Cons: Lower initial coulombic efficiency
+
+Silicon and Silicon–Graphite Composite
+- Silicon has huge capacity (~3579 mAh/g), 10× graphite
+- Problem: ~300% volume expansion during lithiation
+- This causes particle cracking, SEI breaking, and capacity fade
+- Industry solution: Use a small percentage of silicon in graphite anodes + special binders (e.g., PAA, CMC)
+
+Lithium Metal
+- Used in next-gen solid-state batteries
+- Extremely high specific capacity (~3860 mAh/g)
+- Lightest metal
+- Main issue: Dendrite formation, safety concerns
+
+
+3. KEY ANODE CHALLENGES
+
+Lithium plating:
+- Happens when charging too fast, at low temperature, or overcharging
+- Metallic Li deposits on the anode surface
+- Can form dendrites → internal short circuit → thermal runaway
+
+SEI formation:
+- Necessary protective layer formed on anode
+- Consumes some Li+ during first cycles → irreversible capacity loss
+- Stable SEI is essential for long cycle life
+
+Mechanical stress:
+- Volume change of anode materials (especially silicon) causes stress
+- Can lead to cracks and loss of electrical contact
+
+
+4. ANODE DESIGN IMPROVEMENTS
+
+- Use nano-structured materials to reduce stress
+- Use elastic binders to accommodate volume changes
+- Optimize particle size and porosity
+- Design electrolyte additives to form stable SEI
