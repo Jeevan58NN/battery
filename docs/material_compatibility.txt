@@ -1,0 +1,34 @@
+MATERIAL COMPATIBILITY RULES
+
+1. Anode–Electrolyte Compatibility:
+- Graphite requires SEI-forming additives (VC, FEC)
+- Silicon–graphite needs high FEC content (5–10%)
+- LTO requires no SEI → high stability
+
+2. Cathode–Electrolyte Compatibility:
+- LFP works with standard electrolyte
+- NMC/NCA require electrolyte with additives (VC, PS)
+- High-voltage LMO (4.7V) needs fluorinated electrolyte
+
+3. Temperature Rules:
+Low temperature (<10°C)
+- Silicon performs poorly → lithium plating risk
+- Recommend graphite or LTO anode
+
+High temperature (>45°C)
+- Avoid high-Ni cathodes (NMC811 or NCA)
+- Prefer LFP or LMO
+
+4. If user asks:
+"I am using ANODE X + ELECTROLYTE Y at TEMPERATURE Z. What cathode?"
+Bot must check:
+- Stability window
+- Anode potential
+- Electrolyte compatibility
+- Required voltage
+
+5. Examples:
+Graphite anode + standard electrolyte + room temp → LFP or NMC
+Graphite anode + HV electrolyte → 4.7V LMO
+Silicon composite + strong SEI-forming electrolyte → NMC 811 or NCA
+LTO anode → must use high-voltage cathode to recover voltage
