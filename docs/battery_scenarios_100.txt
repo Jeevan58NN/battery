@@ -1,0 +1,1002 @@
+=========================================
+BATTERY ENGINEERING — 100 SCENARIO DATASET
+=========================================
+
+# FORMAT:
+Scenario:
+Answer:
+
+-----------------------------------------------------
+
+Scenario 1:
+Anode = Graphite  
+Electrolyte = EC/DMC + LiPF6  
+Temp = 25°C  
+Required = 5V, 3A  
+
+Answer:
+Use LNMO cathode (4.7–5.0V).  
+Add LiBOB + LiFSI additives.  
+Reduce cathode thickness to 55 µm.  
+Use ceramic separator.
+
+-----------------------------------------------------
+
+Scenario 2:
+Anode = Hard Carbon  
+Electrolyte = EMC + FEC  
+Temp = 50°C  
+Required = 4V, 5A  
+
+Answer:
+Use NMC532 cathode (4.2V).  
+Use EC-free electrolyte for high temp.  
+Increase cathode porosity to 35%.  
+Use 6% carbon black.
+
+-----------------------------------------------------
+
+Scenario 3:
+Anode = LTO  
+Electrolyte = EC:DMC 1:1  
+Temp = 30°C  
+Required = Long cycle life  
+
+Answer:
+Use LFP cathode (3.2V).  
+Expect >6000 cycles.  
+Standard electrolyte ok.  
+Low-current design recommended.
+
+-----------------------------------------------------
+
+Scenario 4:
+Anode = Graphite  
+Cathode = NMC811  
+Temp = 25°C  
+Required = High current (3C)  
+
+Answer:
+Use FEC + VC additives.  
+Lower electrode thickness to 60 µm.  
+N/P ratio ≈ 1.05.
+
+-----------------------------------------------------
+
+Scenario 5:
+Anode = Graphite  
+Electrolyte = EC/DMC  
+Temp = 55°C  
+Safety priority.  
+
+Answer:
+Use LFP cathode.  
+Use ceramic-coated separator.  
+Use LiFSI electrolyte.
+
+-----------------------------------------------------
+
+Scenario 6:
+Anode = Hard Carbon  
+Electrolyte = EC-free  
+Temp = 0°C  
+Required = Fast charging  
+
+Answer:
+Use NMC622 cathode.  
+Use ether-based electrolyte (DME).  
+Enable 2C charge capability.
+
+-----------------------------------------------------
+
+Scenario 7:
+Anode = LTO  
+Temp = -20°C  
+Required = any output  
+
+Answer:
+Use LFP cathode.  
+Stable even at -20°C.  
+Electrolyte: Ether-based optimal.
+
+-----------------------------------------------------
+
+Scenario 8:
+Anode = Graphite  
+Electrolyte = LiFSI  
+Temp = 45°C  
+Required = >4.4V system  
+
+Answer:
+Use high-voltage NMC (doped).  
+Add LiBOB to protect anode SEI.  
+Expect stable 4.5–4.6V.
+
+-----------------------------------------------------
+
+Scenario 9:
+Anode = Hard Carbon  
+Electrolyte = LiPF6 + FEC  
+Temp = 30°C  
+Required = 5A output  
+
+Answer:
+Use LNMO cathode.  
+Cathode thickness <55 µm.  
+Porosity ~32%.  
+High conductivity electrolyte recommended.
+
+-----------------------------------------------------
+
+Scenario 10:
+Anode = Graphite  
+Temp = 25°C  
+Required = 4.2V, low cost  
+
+Answer:
+Use LCO cathode.  
+Use 1% VC additive.  
+Avoid high currents.
+
+-----------------------------------------------------
+
+Scenario 11:
+Anode = Graphite  
+Purpose = EV power  
+Required: 3.6V, long cycle  
+
+Answer:
+Use NMC622.  
+Use FEC additive.  
+Optimize particle size distribution.
+
+-----------------------------------------------------
+
+Scenario 12:
+Anode = Hard Carbon  
+Temp = 40°C  
+Voltage target = 5V  
+
+Answer:
+Use LNMO.  
+Use LiDFOB additive.  
+Avoid EC-containing electrolytes.
+
+-----------------------------------------------------
+
+Scenario 13:
+Anode = Lithium Metal  
+Voltage target = 6V  
+
+Answer:
+Use solid electrolyte (LLZO).  
+Cathode: High voltage LRLO.  
+Cannot use liquid electrolyte.
+
+-----------------------------------------------------
+
+Scenario 14:
+Anode = Graphite  
+Temp = 60°C (very high)  
+Current = 2A  
+
+Answer:
+Use LFP cathode.  
+Use LiFSI + TMS additives.  
+Use ceramic separator.
+
+-----------------------------------------------------
+
+Scenario 15:
+Anode = LTO  
+Voltage target = 3.0–3.3V  
+Need = high safety  
+
+Answer:
+Use LFP.  
+Extremely stable chemistry.
+
+-----------------------------------------------------
+
+Scenario 16:
+Anode = Hard Carbon  
+Electrolyte = EC-free  
+Voltage target = 5V  
+
+Answer:
+Use LNMO.  
+Add LiBOB + LiFSI.
+
+-----------------------------------------------------
+
+Scenario 17:
+Anode = Graphite  
+Electrolyte = EC/DMC + FEC  
+Need = cold temperature performance  
+
+Answer:
+Use NMC811.  
+Increase electrolyte conductivity with LiFSI.  
+Expect poor performance below 0°C.
+
+-----------------------------------------------------
+
+Scenario 18:
+Anode = Graphite  
+Need = Fast Charging (3C)  
+
+Answer:
+Use LTO instead for true fast charge.  
+If not possible:  
+Use NMC + graphite with high porosity electrodes.
+
+-----------------------------------------------------
+
+Scenario 19:
+Anode = Hard Carbon  
+Temp = 25°C  
+Need = Low internal resistance  
+
+Answer:
+Use NMC523.  
+Use small particle size.  
+Use high-conductivity electrolyte.
+
+-----------------------------------------------------
+
+Scenario 20:
+Anode = LTO  
+Need = 10A output  
+
+Answer:
+Use LFP.  
+LTO-LFP supports 10–20C discharge.
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+Scenario 21:
+Anode = Hard Carbon
+Electrolyte = FEC + LiFSI
+Temp = 20°C
+Required Output = 4.5V, 4A
+
+Answer:
+Use High-voltage NMC (4.5V).
+Add LiBOB for SEI stability.
+Cathode porosity: 30–35%.
+
+-----------------------------------------------------
+Scenario 22:
+Anode = Graphite
+Electrolyte = EC/DMC
+Temp = 0°C
+Required Output = Good cold-start performance
+
+Answer:
+Use LFP cathode.
+Use electrolyte with 10% FEC.
+Increase carbon black for conductivity.
+
+-----------------------------------------------------
+Scenario 23:
+Anode = LTO
+Electrolyte = EC-free
+Temp = 60°C
+Required = Extreme safety
+
+Answer:
+Use LFP cathode.
+Use ceramic separator.
+Avoid EC; use LiFSI only.
+
+-----------------------------------------------------
+Scenario 24:
+Anode = Hard Carbon
+Electrolyte = FEC + VC
+Temp = 30°C
+Required Voltage = 5V
+
+Answer:
+Use LNMO cathode.
+Electrolyte must be high-voltage tolerant.
+Include LiDFOB additive.
+
+-----------------------------------------------------
+Scenario 25:
+Anode = Graphite
+Electrolyte = LiPF6
+Temp = 45°C
+Need = 8A output
+
+Answer:
+Use NMC811.
+Cathode thickness <60 μm.
+Increase binder for mechanical integrity.
+
+-----------------------------------------------------
+Scenario 26:
+Anode = Hard Carbon
+Temp = 25°C
+Need = Fast charging (2C)
+
+Answer:
+Use NMC622.
+Increase porosity in both electrodes.
+Use LiFSI for high ionic conductivity.
+
+-----------------------------------------------------
+Scenario 27:
+Anode = LTO
+Temp = -10°C
+Need = Reliable performance
+
+Answer:
+Use LFP.
+Ether-based electrolyte preferred.
+
+-----------------------------------------------------
+Scenario 28:
+Anode = Graphite
+Temp = 55°C
+Need = High safety
+
+Answer:
+Use LFP.
+Use ceramic separator.
+Add 2% VC + TMS.
+
+-----------------------------------------------------
+Scenario 29:
+Anode = Hard Carbon
+Temp = 30°C
+Need = Voltage 4.8–5.0V
+
+Answer:
+Use LNMO.
+Use low-viscosity electrolyte.
+Increase cathode surface coating.
+
+-----------------------------------------------------
+Scenario 30:
+Anode = Lithium Metal
+Need = 500 Wh/kg energy
+
+Answer:
+Use NMC811 + Solid-state electrolyte (LLZO).
+Careful interface protection required.
+
+-----------------------------------------------------
+Scenario 31:
+Anode = Graphite
+Need = EV range extension
+
+Answer:
+Use NMC811.
+High-energy design: 3.7–3.8V nominal.
+
+-----------------------------------------------------
+Scenario 32:
+Anode = Hard Carbon
+Need = Low-cost + high energy
+
+Answer:
+Use LFP.
+Thicker electrodes permissible.
+
+-----------------------------------------------------
+Scenario 33:
+Anode = LTO
+Need = Ultra-fast charge (5C)
+
+Answer:
+Use LFP.
+Increase electrolyte salt concentration to 2M.
+
+-----------------------------------------------------
+Scenario 34:
+Anode = Graphite
+Need = 3A continuous output
+
+Answer:
+Use NMC532.
+Add carbon conductive network.
+
+-----------------------------------------------------
+Scenario 35:
+Anode = Hard Carbon
+Temp = 45°C
+Need = 6A high current
+
+Answer:
+Use NMC622.
+Use EC-free electrolyte.
+
+-----------------------------------------------------
+Scenario 36:
+Anode = Graphite
+Electrolyte = High-voltage LiFSI
+Need = 4.6V system
+
+Answer:
+Use NMC811 (doped).
+Requires advanced electrolyte additives.
+
+-----------------------------------------------------
+Scenario 37:
+Anode = LTO
+Need = Maximum cycle life
+
+Answer:
+Use LFP.
+>7000 cycles possible.
+
+-----------------------------------------------------
+Scenario 38:
+Anode = Hard Carbon
+Temp = 10°C
+Need = Stable low-temperature charge
+
+Answer:
+Use NMC523.
+Use DME-based electrolyte.
+
+-----------------------------------------------------
+Scenario 39:
+Anode = Graphite
+Need = Low swelling
+
+Answer:
+Use LFP.
+Use 1% VC additive.
+
+-----------------------------------------------------
+Scenario 40:
+Anode = Hard Carbon
+Need = Voltage 5V output
+
+Answer:
+Use LNMO.
+Keep current <3A for stability.
+
+-----------------------------------------------------
+Scenario 41:
+Anode = Graphite
+Temp = 0°C
+Need = 3A current
+
+Answer:
+Use LFP.
+Use low-temp electrolyte.
+
+-----------------------------------------------------
+Scenario 42:
+Anode = Hard Carbon
+Temp = 50°C
+Need = 5V
+
+Answer:
+Use LNMO.
+Use LiFSI-based electrolyte.
+Requires advanced coatings.
+
+-----------------------------------------------------
+Scenario 43:
+Anode = Graphite
+Need = High power pulses (10A peak)
+
+Answer:
+Use LTO if possible.
+If not: use NMC811 + thin electrodes.
+
+-----------------------------------------------------
+Scenario 44:
+Anode = Graphite
+Temp = 25°C
+Need = 4.2V output
+
+Answer:
+Use LCO.
+Avoid high-current designs.
+
+-----------------------------------------------------
+Scenario 45:
+Anode = Hard Carbon
+Need = 3.6V nominal
+
+Answer:
+Use NMC523.
+Stable + cost-effective.
+
+-----------------------------------------------------
+Scenario 46:
+Anode = LTO
+Need = 20C discharge
+
+Answer:
+Use LFP.
+Use high surface area materials.
+
+-----------------------------------------------------
+Scenario 47:
+Anode = Hard Carbon
+Need = 4A stable output
+
+Answer:
+Use NMC622.
+Increase carbon content to 6%.
+
+-----------------------------------------------------
+Scenario 48:
+Anode = Graphite
+Temp = 50°C
+Need = cycle life >2000
+
+Answer:
+Use LFP.
+Use LiFSI electrolyte.
+
+-----------------------------------------------------
+Scenario 49:
+Anode = Hard Carbon
+Need = 5.0V capability
+
+Answer:
+Use LNMO.
+Use high-voltage electrolyte.
+
+-----------------------------------------------------
+Scenario 50:
+Anode = Lithium Metal
+Need = 4.4V, high energy
+
+Answer:
+Use NMC811.
+Use solid-state or hybrid electrolyte.
+
+-----------------------------------------------------
+Scenario 51:
+Anode = Hard Carbon
+Need = cold temperature (−15°C)
+
+Answer:
+Use NMC622.
+Use DME-based electrolyte.
+
+-----------------------------------------------------
+Scenario 52:
+Anode = Graphite
+Need = Low IR
+
+Answer:
+Use NMC811.
+Ensure high conductivity additives.
+
+-----------------------------------------------------
+Scenario 53:
+Anode = Hard Carbon
+Need = 25A bursts
+
+Answer:
+Use LTO-based architecture instead.
+
+-----------------------------------------------------
+Scenario 54:
+Anode = LTO
+Need = 3V
+
+Answer:
+Use LFP.
+Very stable.
+
+-----------------------------------------------------
+Scenario 55:
+Anode = Hard Carbon
+Need = 5V output
+
+Answer:
+Use LNMO.
+Use LiDFOB additive.
+
+-----------------------------------------------------
+Scenario 56:
+Anode = Graphite
+Need = 3.6V
+
+Answer:
+Use NMC.
+Standard formulation.
+
+-----------------------------------------------------
+Scenario 57:
+Anode = Hard Carbon
+Temp = 60°C
+Need = safe chemistry
+
+Answer:
+Use LFP.
+Thermally stable.
+
+-----------------------------------------------------
+Scenario 58:
+Anode = Graphite
+Need = 6A output
+
+Answer:
+Use NMC811.
+Thin electrodes required.
+
+-----------------------------------------------------
+Scenario 59:
+Anode = Hard Carbon
+Need = 3.7V nominal
+
+Answer:
+Use LCO.
+Use FEC additive.
+
+-----------------------------------------------------
+Scenario 60:
+Anode = Hard Carbon
+Need = 3A output
+
+Answer:
+Use LFP.
+Use higher electrode thickness.
+
+-----------------------------------------------------
+Scenario 61:
+Anode = LTO
+Need = long-term storage
+
+Answer:
+Use LFP.
+Minimal degradation.
+
+-----------------------------------------------------
+Scenario 62:
+Anode = Hard Carbon
+Need = 10-year lifetime
+
+Answer:
+Use LFP.
+Use LiFSI electrolyte.
+
+-----------------------------------------------------
+Scenario 63:
+Anode = Lithium Metal
+Need = 4.0V
+
+Answer:
+Use LFP with solid-state.
+
+-----------------------------------------------------
+Scenario 64:
+Anode = Graphite
+Need = 4.5V
+
+Answer:
+Use doped NMC.
+Add advanced additives.
+
+-----------------------------------------------------
+Scenario 65:
+Anode = Hard Carbon
+Need = 5V high current
+
+Answer:
+Use LNMO.
+Current limited to <4A.
+
+-----------------------------------------------------
+Scenario 66:
+Anode = Hard Carbon
+Temp = 0°C
+Need = 4V
+
+Answer:
+Use NMC523.
+Use DME-based electrolyte.
+
+-----------------------------------------------------
+Scenario 67:
+Anode = Graphite
+Temp = 20°C
+Need = Low-cost + reliable
+
+Answer:
+Use LFP.
+Use standard electrolyte.
+
+-----------------------------------------------------
+Scenario 68:
+Anode = Hard Carbon
+Need = 5A continuous
+
+Answer:
+Use NMC811.
+Increase conductive additives.
+
+-----------------------------------------------------
+Scenario 69:
+Anode = LTO
+Need = 3A at −10°C
+
+Answer:
+Use LFP.
+Use ether-based electrolyte.
+
+-----------------------------------------------------
+Scenario 70:
+Anode = Hard Carbon
+Temp = 30°C
+Need = 5V with safety
+
+Answer:
+Use LNMO.
+Use ceramic separator.
+
+-----------------------------------------------------
+Scenario 71:
+Anode = Graphite
+Need = 4A output
+
+Answer:
+Use NMC532.
+Use carbon-coated particles.
+
+-----------------------------------------------------
+Scenario 72:
+Anode = Hard Carbon
+Need = 6A at 30°C
+
+Answer:
+Use NMC811.
+Add 7% carbon conductive agent.
+
+-----------------------------------------------------
+Scenario 73:
+Anode = Graphite
+Need = EV-grade durability
+
+Answer:
+Use NMC811.
+Use gradient cathode design.
+
+-----------------------------------------------------
+Scenario 74:
+Anode = Hard Carbon
+Need = high-voltage (4.8V)
+
+Answer:
+Use LNMO.
+Requires advanced coatings.
+
+-----------------------------------------------------
+Scenario 75:
+Anode = LTO
+Need = max safety
+
+Answer:
+Use LFP.
+Nonflammable electrolyte preferred.
+
+-----------------------------------------------------
+Scenario 76:
+Anode = Hard Carbon
+Temp = 40°C
+Need = 3.6V
+
+Answer:
+Use NMC622.
+Stable at mid-high temp.
+
+-----------------------------------------------------
+Scenario 77:
+Anode = Graphite
+Temp = 30°C
+Need = 3A
+
+Answer:
+Use LFP.
+Cost-effective.
+
+-----------------------------------------------------
+Scenario 78:
+Anode = Hard Carbon
+Need = 4.2V
+
+Answer:
+Use LCO.
+Controlled current required.
+
+-----------------------------------------------------
+Scenario 79:
+Anode = Hard Carbon
+Need = 20A bursts
+
+Answer:
+Not suitable. Use LTO instead.
+
+-----------------------------------------------------
+Scenario 80:
+Anode = Graphite
+Need = 4.3V
+
+Answer:
+Use high-voltage NMC.
+
+-----------------------------------------------------
+Scenario 81:
+Anode = Hard Carbon
+Need = 5.0V output
+
+Answer:
+Use LNMO + LiBOB additive.
+
+-----------------------------------------------------
+Scenario 82:
+Anode = Hard Carbon
+Need = low degradation
+
+Answer:
+Use LFP.
+Use LiFSI.
+
+-----------------------------------------------------
+Scenario 83:
+Anode = Lithium Metal
+Need = 500 cycles
+
+Answer:
+Use NMC + solid electrolyte.
+Severe dendrite risk with liquids.
+
+-----------------------------------------------------
+Scenario 84:
+Anode = Hard Carbon
+Temp = 30°C
+Need = low swelling
+
+Answer:
+Use NMC532.
+Stable SEI.
+
+-----------------------------------------------------
+Scenario 85:
+Anode = LTO
+Need = 2A at 25°C
+
+Answer:
+Use LFP.
+No SEI formation issues.
+
+-----------------------------------------------------
+Scenario 86:
+Anode = Hard Carbon
+Need = 3.9V
+
+Answer:
+Use NMC.
+Simple chemistry.
+
+-----------------------------------------------------
+Scenario 87:
+Anode = Graphite
+Need = minimal heat rise
+
+Answer:
+Use LFP.
+
+-----------------------------------------------------
+Scenario 88:
+Anode = Hard Carbon
+Temp = 45°C
+Need = 4V
+
+Answer:
+Use NMC622.
+
+-----------------------------------------------------
+Scenario 89:
+Anode = Hard Carbon
+Need = 6A
+
+Answer:
+Use NMC811.
+
+-----------------------------------------------------
+Scenario 90:
+Anode = Hard Carbon
+Temp = 20°C
+Need = 5V
+
+Answer:
+Use LNMO.
+
+-----------------------------------------------------
+Scenario 91:
+Anode = Graphite
+Need = 4.4V
+
+Answer:
+Use doped NMC.
+
+-----------------------------------------------------
+Scenario 92:
+Anode = Hard Carbon
+Need = 3.4V
+
+Answer:
+Use LFP.
+
+-----------------------------------------------------
+Scenario 93:
+Anode = LTO
+Need = 10C discharge
+
+Answer:
+Use LFP.
+
+-----------------------------------------------------
+Scenario 94:
+Anode = Hard Carbon
+Need = 3A
+
+Answer:
+Use LFP.
+
+-----------------------------------------------------
+Scenario 95:
+Anode = Graphite
+Need = 5A
+
+Answer:
+Use NMC811.
+
+-----------------------------------------------------
+Scenario 96:
+Anode = Hard Carbon
+Temp = 10°C
+Need = 4.2V
+
+Answer:
+Use LCO.
+
+-----------------------------------------------------
+Scenario 97:
+Anode = Hard Carbon
+Need = 4.8V
+
+Answer:
+Use LNMO.
+
+-----------------------------------------------------
+Scenario 98:
+Anode = Hard Carbon
+Need = 3.6V
+
+Answer:
+Use NMC532.
+
+-----------------------------------------------------
+Scenario 99:
+Anode = Hard Carbon
+Need = 4A
+
+Answer:
+Use NMC622.
+
+-----------------------------------------------------
+Scenario 100:
+Anode = Hard Carbon
+Need = 5V, 3A at 25°C
+
+Answer:
+Use LNMO.
+Use high-voltage electrolyte.
+Cathode coating recommended.
+
+-----------------------------------------------------
+END OF 100 SCENARIOS
+
