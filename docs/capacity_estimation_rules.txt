@@ -1,0 +1,15 @@
+CAPACITY DESIGN RULES
+
+1. Capacity is proportional to:
+- Cathode loading (mg/cm²)
+- Active material %
+- Particle size (smaller → more surface area)
+
+2. Increase Capacity by:
+- Higher nickel cathodes (NMC811)
+- Silicon composite anodes
+- Thicker electrodes + good ion pathways
+
+3. If user asks:
+“How to increase capacity?”
+→ Suggest increasing loading, switching cathode, adding Si.
