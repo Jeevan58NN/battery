@@ -1,0 +1,25 @@
+# Current (Amp) Prediction – Based on Materials & Structure
+
+1. Current output (A) increases with:
+   - Higher cathode surface area
+   - Lower internal resistance
+   - High-conductivity electrolyte
+   - Higher temperature (up to 45°C)
+
+2. Cathode material ranking for high current:
+   Highest → LMO > LNMO > NMC > LCO > LFP → Lowest
+
+3. Anode influence:
+   - Graphite: good up to 3C
+   - Hard carbon: moderate power
+   - LTO: BEST for high current (20C possible)
+
+4. To achieve target current (e.g., 3 A):
+   - Increase carbon black % to 5–6%
+   - Decrease cathode thickness to < 60 µm
+   - Use low-viscosity electrolyte (EC-free)
+   - Ensure porosity around 30–35%
+
+5. Temperature effects:
+   - +10°C → Current capability increases ~8–12%
+   - > 55°C → Rapid degradation
