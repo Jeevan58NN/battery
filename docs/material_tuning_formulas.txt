@@ -1,0 +1,15 @@
+MATERIAL TUNING FORMULAS
+
+1. Capacity Increase Formula:
+ΔCapacity ≈ Loading_increase × Efficiency_factor
+
+2. Voltage Adjustment:
+V_cell = V_cathode - V_anode
+
+3. Impedance:
+R_total = R_ohmic + R_charge_transfer + R_diffusion
+
+4. Power:
+P = V × I - I²R
+
+Bot can calculate approximate trends.
