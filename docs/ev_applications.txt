@@ -1,0 +1,51 @@
+1. EV BATTERY REQUIREMENTS
+
+- High energy density (for range)
+- Adequate power (for acceleration and regen braking)
+- Long cycle and calendar life (8–15 years)
+- High safety level
+- Wide operating temperature range
+- Fast charging capability
+- Cost-effective
+
+
+2. CHEMISTRY CHOICES
+
+LFP in EVs:
+- Pros: Safe, long life, cheaper, good for buses and mass-market EVs
+- Cons: Lower energy density, larger pack
+
+NMC/NCA in EVs:
+- Pros: Higher energy density, more range for same pack size
+- Cons: More sensitive to abuse, more complex thermal management, more expensive
+
+
+3. PACK VOLTAGE AND CAPACITY
+
+- Small EVs: 48–96 V packs
+- Passenger cars: 300–800 V packs (high-voltage architecture)
+- Higher voltage → lower current for same power → thinner cables, less heat
+
+
+4. EV-SPECIFIC BMS FEATURES
+
+- Cell balancing across large number of cells
+- Range estimation and prediction
+- Charge control with fast chargers (CCS, CHAdeMO, GB/T)
+- Thermal management integration
+- Fault diagnostics and logging
+
+
+5. APPLICATION-SPECIFIC RECOMMENDATIONS
+
+Two-wheelers:
+- Prefer LFP or LFP-based packs
+- Focus on safety, cost, and moderate range
+
+City buses:
+- Often use LFP
+- Many cycles per day, opportunity charging
+
+Passenger cars:
+- Mix of NMC, NCA, and LFP depending on segment
+- High-range models prefer high-Ni chemistries (NMC 811, NCA)
