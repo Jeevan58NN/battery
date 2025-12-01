@@ -1,0 +1,19 @@
+BATTERY AGING MECHANISMS
+
+1. Calendar Aging:
+- Caused by time, even without usage
+- Increased by high temperature (>40°C)
+- Fix: store at 40–60% SOC
+
+2. Cycle Aging:
+- SEI growth
+- Electrode particle cracking
+- Loss of active material
+
+3. High-Voltage Aging:
+- Charging above manufacturer limit accelerates cathode breakdown
+
+4. Solutions:
+- Reduce charge voltage
+- Improve SEI via additives
+- Optimize cycling window (20–80% SOC)
