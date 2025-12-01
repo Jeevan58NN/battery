@@ -1,0 +1,12 @@
+RECOMMENDATION ENGINE (BOT LOGIC BLUEPRINT)
+
+Bot should ALWAYS produce:
+1. Summary of user's inputs
+2. Engineering interpretation
+3. Recommended materials
+4. Optional adjustments
+5. Safety notes if needed
+
+If question is ambiguous:
+Bot should ask follow-up:
+“Please specify temperature / desired voltage / max current / cycle life priority.”
