@@ -1,0 +1,27 @@
+ELECTROLYTE ENGINEERING GUIDE
+
+1. Standard Li-ion Electrolyte:
+- 1M LiPF6 in EC:EMC (3:7)
+- Pros: high conductivity, stable SEI for graphite
+- Cons: unstable above 4.3V
+
+2. High-Voltage Electrolyte:
+- LiPF6 or LiFSI in Fluoroethylene Carbonate (FEC), Fluorinated Solvents (FEMC, FDEC)
+- Needed for voltages > 4.4V
+- For high-voltage spinel (4.7V), add PES additive.
+
+3. Low-Temperature Electrolyte:
+Use:
+- LiTFSI + low-viscosity solvents
+- High EMC/DMC ratio
+- Avoid high EC content
+Result: Better ion mobility at <10°C
+
+4. High-Power Electrolyte:
+- Lower viscosity formulation → faster ion transport
+- Add 2–3% VC to stabilize SEI
+- Used in drones, power tools.
+
+5. If user asks:
+“What electrolyte for ___ chemistry + temp ___?”
+→ Choose based on stability window + viscosity + SEI needs.
