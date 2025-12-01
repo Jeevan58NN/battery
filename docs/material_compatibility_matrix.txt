@@ -1,0 +1,22 @@
+# Material Compatibility Matrix – What Works With What
+
+1. Cathode → Anode compatibility:
+   - NMC → Graphite / Hard Carbon
+   - LNMO → Hard Carbon preferred (graphite OK with additives)
+   - LFP → Graphite / Hard Carbon / LTO
+   - LCO → Graphite (ONLY)
+
+2. Cathode → Electrolyte compatibility:
+   LNMO → Needs high-voltage electrolyte (LiFSI + additives)
+   LCO → Needs Co-stabilizers (VC, FEC)
+   NMC → Works with most standard electrolytes
+   LFP → Works with almost all electrolytes
+
+3. Anode → Electrolyte compatibility:
+   Graphite → EC/DMC + FEC
+   Hard Carbon → EC-free OK
+   LTO → Universal compatibility
+
+4. Temperature matching:
+   - High temp (>45°C): avoid EC, use FEC + TMS
+   - Low temp: LTO + ether-based electrolyte
