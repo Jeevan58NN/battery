@@ -1,0 +1,69 @@
+1. ROLE OF CATHODE
+
+Cathode is the positive electrode in a Li-ion battery.
+It is usually a lithium-containing metal oxide.
+During discharge:
+- Li+ move from anode → cathode
+- Electrons move through external circuit to cathode
+
+Cathode largely decides:
+- Energy density
+- Voltage
+- Cost
+- Safety
+
+
+2. MAIN CATHODE CHEMISTRIES
+
+LCO (Lithium Cobalt Oxide, LiCoO2)
+- Used in phones, laptops
+- High energy density
+- Expensive, cobalt supply and ethical issues
+- Moderate cycle life
+
+NMC (Lithium Nickel Manganese Cobalt Oxide, LiNixMnyCozO2)
+- Variants: NMC 111, 532, 622, 811
+- Higher Ni → higher energy, lower cost
+- Mn improves stability and safety
+- Co improves conductivity and cycle life
+- Widely used in EVs
+
+NCA (Lithium Nickel Cobalt Aluminum Oxide, LiNiCoAlO2)
+- High energy, used in some Tesla packs
+- High Ni, low Co
+- Needs careful thermal management
+
+LFP (Lithium Iron Phosphate, LiFePO4)
+- Lower energy density than NMC/NCA
+- Very safe (strong P–O bond)
+- Long cycle life (3000+ cycles)
+- Good thermal stability
+- Popular in EV buses, 2-wheelers, ESS
+
+LMO (Lithium Manganese Oxide, LiMn2O4)
+- Spinel structure
+- High power capability
+- Lower cycle life compared to NMC/LFP
+- Sometimes blended with NMC
+
+
+3. CATHODE PROPERTIES TO OPTIMIZE
+
+- Specific capacity (mAh/g)
+- Voltage vs Li/Li+
+- Thermal stability
+- Resistance to oxygen release at high SOC or high temperature
+- Cost of raw materials (Ni, Co, Mn, Fe, P, Al)
+
+4. DEGRADATION MECHANISMS (short view)
+
+- Transition metal dissolution (Mn, Ni) into electrolyte
+- Micro-cracking of particles
+- Loss of active Li due to side reactions
+- Structural phase changes with deep cycling
+
+Cathode engineering uses:
+- Doping
+- Coatings
+- Particle size control
+to improve life and safety.
