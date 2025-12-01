@@ -1,0 +1,38 @@
+1. OVERVIEW OF LFP
+
+LFP = Lithium Iron Phosphate (LiFePO4)
+- Olivine structure
+- Nominal cell voltage ~3.2–3.3 V
+- Specific capacity ~150–170 mAh/g
+
+2. ADVANTAGES
+
+- Very safe → strong P–O bond, less oxygen release
+- Excellent thermal stability, low risk of thermal runaway
+- Long cycle life (3000–8000 cycles possible)
+- Good for frequent charge–discharge (buses, taxis)
+- Can operate well at partial state of charge
+- Lower cost due to iron and phosphorus (no Ni or Co)
+
+3. DISADVANTAGES
+
+- Lower energy density than NMC/NCA
+- Larger pack needed for same range
+- Lower voltage (3.2 V vs 3.6–3.7 V of NMC)
+
+4. TYPICAL USE CASES
+
+- Electric buses and commercial EVs
+- Entry-level and mass-market EVs
+- Two-wheelers and three-wheelers
+- Stationary energy storage (home, grid)
+- Applications where safety and life are more important than compact size
+
+5. WHEN TO RECOMMEND LFP
+
+Use LFP when:
+- Safety is top priority
+- Long cycle life is needed
+- High temperature environment
+- Cost-sensitive applications
+- Daily deep cycling (energy storage)
