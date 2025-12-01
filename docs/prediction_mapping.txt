@@ -1,0 +1,8 @@
+HOW TO USE PREDICTION OUTPUT IN DESIGN RECOMMENDATIONS
+
+If the user prediction model outputs:
+- Low capacity → Suggest increasing cathode loading or using NMC
+- High resistance → Suggest thinner electrodes or better electrolyte
+- Poor cycle life → Suggest reducing silicon %, using additives
+
+Prediction output → RAG → Final answer synthesis
