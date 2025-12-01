@@ -1,0 +1,26 @@
+CHARGING PROFILES AND RULES
+
+1. Constant Current – Constant Voltage (CC–CV)
+- Standard lithium-ion method.
+- CC until 4.2V (NMC/LCO), then CV.
+- For LFP → 3.65V CV.
+
+2. Fast Charging Rules:
+- Increase current only if:
+   → Temperature 20–35°C
+   → Internal resistance low
+- Additives needed:
+   → FEC, LiDFOB for SEI stability
+- Silicon anodes cannot fast charge aggressively.
+
+3. Charging Limits:
+- High-Ni cathodes (NMC811, NCA) degrade if charged above 4.25V.
+- LFP is safest for fast charging.
+
+4. Safety Rules:
+- Overcharge → lithium plating → thermal runaway
+- Suggest lower C-rate for cold temperatures.
+
+5. If user asks:
+“How to reduce charging time?”
+→ Suggest higher C-rate, preheating, low-impedance electrolyte.
