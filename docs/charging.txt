@@ -1,0 +1,47 @@
+1. BASIC CHARGING METHOD (LI-ION)
+
+Standard profile: CC–CV (Constant Current – Constant Voltage)
+
+Step 1: Constant Current (CC)
+- Battery is charged with fixed current (e.g., 0.5C or 1C)
+- Voltage rises gradually
+
+Step 2: Constant Voltage (CV)
+- When voltage reaches upper limit (e.g., 4.2 V for many Li-ion cells)
+- Charger holds voltage constant
+- Current gradually decreases
+- Charging stops when current falls below a threshold (e.g., 0.05C)
+
+
+2. CHARGING TERMS
+
+C-rate:
+- 1C means charging current equals capacity
+  - For 2 Ah cell, 1C = 2 A
+- 0.5C for 2 Ah cell = 1 A
+
+Fast charging:
+- Charging at high C-rates (e.g., 2C, 3C)
+- Generates more heat
+- Increases degradation if not managed properly
+
+
+3. FACTORS AFFECTING SAFE CHARGING
+
+Temperature:
+- Too cold (< 0°C): risk of lithium plating
+- Too hot (> 45–50°C): accelerates degradation and safety risk
+
+Voltage limit:
+- Charging above recommended max voltage → fast degradation and safety risk
+
+Current limit:
+- Too high current → more heat, more stress
+
+
+4. GOOD CHARGING PRACTICES
+
+- Avoid frequent 0–100% full cycles if not needed
+- For EVs, daily use in 20–80% SOC range improves life
+- Avoid fast charging all the time
+- Do not charge in very hot or very cold conditions
