@@ -1,0 +1,29 @@
+PARAMETER TUNING GUIDE
+
+If user asks: “What should I change to achieve X?”
+
+1. To increase voltage:
+- Use cathode with higher redox potential
+- Use HV electrolyte
+- Reduce anode potential (graphite instead of LTO)
+
+2. To increase current:
+- Reduce electrode thickness
+- Increase porosity
+- Increase temperature (if safe)
+- Improve electrolyte conductivity
+
+3. To improve cycle life:
+- Reduce silicon %
+- Use electrolyte additives (VC, FEC)
+- Reduce charge voltage limit
+
+4. To increase safety:
+- Switch to LFP cathode
+- Increase separator thickness
+- Add flame-retardant additives
+
+5. To improve energy density:
+- Use NMC811 or NCA
+- Increase cathode loading
+- Reduce porosity slightly
