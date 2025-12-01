@@ -1,0 +1,58 @@
+1. OVERVIEW OF NMC
+
+NMC = Lithium Nickel Manganese Cobalt Oxide
+Formula: LiNixMnyCozO2 where x + y + z = 1
+
+Common compositions:
+- NMC 111: Ni:Mn:Co = 1:1:1
+- NMC 532: 5:3:2
+- NMC 622: 6:2:2
+- NMC 811: 8:1:1
+
+2. ROLE OF EACH ELEMENT
+
+Nickel:
+- Increases energy density
+- Increases capacity
+- But reduces thermal stability at very high content
+
+Manganese:
+- Improves structural stability
+- Helps safety and lower cost
+
+Cobalt:
+- Improves electronic conductivity
+- Stabilizes layered structure
+- Expensive and supply-limited
+
+3. KEY FEATURES
+
+- Higher energy density than LFP
+- Nominal cell voltage ~3.6–3.7 V
+- Good compromise between energy, power, and cycle life
+
+4. TRADE-OFFS BY GRADE
+
+NMC 111:
+- Older generation, more Co
+- Good stability, lower energy
+
+NMC 622:
+- Balanced solution for modern EVs
+- Good energy and life
+
+NMC 811:
+- Very high energy
+- Lower Co content (cost advantage)
+- Requires careful control of manufacturing and BMS to ensure safety
+
+5. WHEN TO RECOMMEND NMC
+
+Use NMC when:
+- High range per charge is required (cars, premium EVs)
+- Space is limited
+- Balanced performance is needed
+
+Downside:
+- More sensitive to abuse than LFP
+- Needs robust thermal management and BMS
