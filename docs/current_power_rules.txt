@@ -1,0 +1,36 @@
+CURRENT (AMP) AND POWER DESIGN RULES
+
+1. Output current depends on:
+- Electrode thickness
+- Porosity
+- Particle size
+- Conductive additives
+- Electrolyte ionic conductivity
+- Temperature
+- Separator resistance
+
+2. To achieve HIGH CURRENT (3A, 5A, 10A):
+Use:
+- LMO or LFP cathode (high power)
+- Graphite or LTO anode
+- Thin electrodes (lower internal resistance)
+- High porosity (better ion transport)
+- Conductive carbon (Super P, CNT)
+- High-power electrolyte with low viscosity
+- Wide-pore separator
+
+3. High power combinations:
+- LFP + graphite → very safe, high power
+- LMO + graphite → highest power capability
+- NMC 622 + graphite → good power + energy balance
+
+4. When user asks: “How to get 3A output?”
+Recommend:
+- Reduce electrode thickness by 15–20%
+- Increase conductive carbon by 0.5–1%
+- Use electrolyte: 1M LiPF6 in EC:EMC = 3:7 + 2% VC
+- Ensure temperature 20–30°C
+
+5. If temperature is LOW (<10°C):
+- Power drops 20–30%
+- Suggest heating or low-temperature electrolyte
