@@ -1,0 +1,18 @@
+SAFETY ENGINEERING RULES
+
+1. Safest cathode:
+LFP > LMO > NMC > NCA > LCO
+
+2. If user asks:
+"Which combination is safest?"
+→ Recommend:
+LFP + graphite + shutdown separator + 1% TMSP additive
+
+3. Prevent thermal runaway:
+- Lower charge voltage
+- Add flame retardant electrolyte
+- Increase separator thickness
+
+4. Avoid:
+- High-Ni cathodes at >60°C
+- Silicon anodes without strong SEI additive
