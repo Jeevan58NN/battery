@@ -1,0 +1,72 @@
+1. WHAT IS BATTERY DEGRADATION?
+
+Degradation = gradual loss of capacity, power, or efficiency over time.
+Main types:
+- Capacity fade (loss of Ah)
+- Power fade (higher internal resistance)
+
+
+2. MAJOR DEGRADATION MECHANISMS
+
+Loss of Lithium Inventory (LLI):
+- Li+ gets trapped in SEI or side products
+- Less active lithium is available for cycling
+- Common cause of early capacity loss
+
+Loss of Active Material (LAM):
+- Cathode or anode material becomes inactive
+- Due to cracking, phase change, or side reactions
+
+SEI Growth:
+- SEI thickens over time
+- Increases internal resistance
+- Consumes more lithium
+
+Lithium Plating:
+- Metallic lithium deposits on anode surface
+- Happens during:
+  - Fast charging
+  - Low temperature charging
+  - Overcharge
+- Dangerous because of dendrite formation
+
+Electrolyte Decomposition:
+- High voltage or high temperature can decompose electrolyte
+- Produces gases → swelling
+- Forms unwanted surface films
+
+Particle Cracking:
+- Volume change during cycling causes mechanical stress
+- Cracks expose fresh surface → more SEI, more side reactions
+
+
+3. FACTORS THAT ACCELERATE DEGRADATION
+
+- High temperature (both storage and operation)
+- Keeping battery at 100% SOC for long periods
+- Deep charge/discharge cycles (0–100%) repeatedly
+- Very high C-rate charging and discharging
+- Operation outside recommended voltage window
+
+
+4. HOW TO REDUCE DEGRADATION
+
+Cell design:
+- Optimized electrode thickness, porosity
+- Stable cathode and anode materials
+- Electrolyte additives for stable SEI
+
+Pack design:
+- Thermal management (cooling plates, coolant, fans)
+- Uniform temperature across pack
+
+BMS strategies:
+- Avoid very high SOC and very low SOC
+- Limit fast charging when cold
+- Use conservative current limits
+- Cell balancing
+
+User habits:
+- Avoid leaving device at 0% or 100% for long time
+- Avoid storing at high temperature
+- Prefer partial charges (e.g., 20–80% for EVs)
