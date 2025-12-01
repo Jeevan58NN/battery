@@ -1,0 +1,22 @@
+LIST OF ELECTROLYTE ADDITIVES AND THEIR EFFECTS
+
+FEC (Fluoroethylene Carbonate)
+- Improves SEI for silicon
+- Reduces lithium plating
+
+VC (Vinylene Carbonate)
+- SEI stabilizer for graphite
+- Improves cycle life
+
+LiDFOB
+- Enhances high-voltage stability
+- Used for >4.3V cells
+
+PES Additive
+- Must for 4.7V high-voltage LMO cells
+
+TMSP Additive
+- Protects cathode at high temperature
+
+BOT MUST:
+→ Recommend additives based on voltage, temperature, and anode type.
