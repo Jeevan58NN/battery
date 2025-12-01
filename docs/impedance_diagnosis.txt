@@ -1,0 +1,17 @@
+IMPEDANCE AND RESISTANCE ANALYSIS
+
+1. High impedance caused by:
+- SEI thickening
+- Cathode film buildup
+- Poor electrolyte conductivity
+- Poor wetting
+- Cycling at low temperature
+
+2. If cell shows:
+- High IR @ high SOC → cathode issue
+- High IR @ low SOC → anode issue
+
+3. Fix:
+- Add VC/FEC
+- Reduce voltage limit
+- Improve wetting by vacuum filling
