@@ -1,0 +1,59 @@
+1. SAFETY RISKS IN LI-ION BATTERIES
+
+Main hazards:
+- Thermal runaway
+- Fire and explosion
+- Toxic or flammable gas release
+
+Thermal runaway:
+- Uncontrolled increase in temperature
+- Exothermic reactions inside cell
+- Triggered by:
+  - Internal short circuit
+  - External short circuit
+  - Overcharge
+  - Mechanical damage (crush, nail penetration)
+  - Overheating from environment or other cells
+
+
+2. THERMAL RUNAWAY PROCESS (SIMPLIFIED)
+
+- SEI breaks down at high temperature
+- Electrolyte decomposes, generating gas and heat
+- Cathode starts releasing oxygen at high temp
+- Oxygen reacts with electrolyte and anode → more heat
+- If not stopped, leads to venting, flame, or explosion
+
+
+3. SAFETY FEATURES AT CELL LEVEL
+
+- Separator with shutdown function (melts and closes pores)
+- Current interrupt device (CID) in cylindrical cells
+- Positive temperature coefficient (PTC) device
+- Safety vents on cylindrical/prismatic cells
+- Flame-retardant electrolyte additives (partially)
+
+
+4. SAFETY FEATURES AT PACK LEVEL
+
+- Fuses and contactors
+- BMS protections:
+  - Overcharge protection
+  - Overdischarge protection
+  - Overcurrent protection
+  - Overtemperature protection
+  - Cell balancing
+- Thermal management: cooling channels, phase-change material
+- Robust mechanical enclosure
+
+
+5. SAFETY TESTS
+
+- Overcharge test
+- External short circuit test
+- Nail penetration test
+- Crush test
+- Thermal shock / thermal abuse test
+- Drop test
+
+Standards depend on application (UN38.3, IEC, UL, AIS etc).
