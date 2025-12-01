@@ -1,0 +1,35 @@
+BATTERY DESIGN DECISION RULES
+
+The bot should follow these rules:
+
+1. Target Voltage:
+If needed voltage < 3.3V → LFP
+If 3.4–3.7V → NMC or NCA
+If > 4.4V → High-voltage LMO
+
+2. Target Current:
+Low ( < 1A ) → Any chemistry
+Medium (1–3A) → NMC or LFP
+High ( >3A ) → LMO or LFP with thin electrodes
+
+3. Temperature:
+Cold (<10°C):
+- Use LTO or graphite anode with FEC-rich electrolyte
+
+Hot (>45°C):
+- Prefer LFP or LMO cathode
+- Avoid high-Ni materials
+
+4. Safety Priority:
+- LFP > LMO > NMC > NCA
+
+5. High Energy Priority:
+- NCA > NMC 811 > NMC 622 > LCO
+
+6. If user provides impossible combination:
+Bot must say:
+"This chemical combination is not physically achievable. Consider adjusting the cathode/anode/electrolyte to meet voltage/power requirements."
+
+7. If required voltage is too high:
+Recommend series connection:
+Example: 5V needed → Use 2 × 2.5V cells in series (LFP)
